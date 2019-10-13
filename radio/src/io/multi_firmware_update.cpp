@@ -60,7 +60,7 @@ class MultiInternalUpdateDriver: public MultiFirmwareUpdateDriver
     void init() const override
     {
       INTERNAL_MODULE_ON();
-      intmoduleSerialStart(57600, true, USART_Parity_No, USART_StopBits_1, USART_WordLength_8b);
+      //intmoduleSerialStart(57600, true, USART_Parity_No, USART_StopBits_1, USART_WordLength_8b);
     }
 
     bool getByte(uint8_t& byte) const override
@@ -70,7 +70,7 @@ class MultiInternalUpdateDriver: public MultiFirmwareUpdateDriver
 
     void sendByte(uint8_t byte) const override
     {
-      intmoduleSendByte(byte);
+      //intmoduleSendByte(byte);
     }
 
     void clear() const override

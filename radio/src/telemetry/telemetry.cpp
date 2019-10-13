@@ -107,13 +107,13 @@ void telemetryWakeup()
   #endif
 #endif
 
-#if defined(INTERNAL_MODULE_MULTI)
+/* #if defined(INTERNAL_MODULE_MULTI)
   while(!intmoduleFifo.isEmpty()) {
     uint8_t b=0;
     intmoduleFifo.pop(b);
     processMultiTelemetryData(b, INTERNAL_MODULE);
   }
-#endif
+#endif */
 
 #if defined(STM32)
   uint8_t data;

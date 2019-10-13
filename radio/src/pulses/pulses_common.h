@@ -44,6 +44,10 @@ class DataBuffer {
       return ptr - data;
     }
 
+    T getLast() {
+      return *(ptr - 1);
+    };
+
   protected:
     T data[SIZE];
     T * ptr;

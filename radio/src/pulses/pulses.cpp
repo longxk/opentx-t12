@@ -313,8 +313,9 @@ static void enablePulsesInternalModule(uint8_t protocol)
 #if defined(INTERNAL_MODULE_MULTI)
     case PROTOCOL_CHANNELS_MULTIMODULE:
       intmodulePulsesData.multi.initFrame();
-      intmoduleSerialStart(MULTIMODULE_BAUDRATE, true, USART_Parity_Even, USART_StopBits_2, USART_WordLength_9b);
-      intmoduleTimerStart(MULTIMODULE_PERIOD);
+      //intmoduleSerialStart(MULTIMODULE_BAUDRATE, true, USART_Parity_Even, USART_StopBits_2, USART_WordLength_9b);
+      //intmoduleTimerStart(MULTIMODULE_PERIOD);
+      intmoduleSerialStart(MULTIMODULE_BAUDRATE, MULTIMODULE_PERIOD * 2000, true);
       break;
 #endif
     default:
